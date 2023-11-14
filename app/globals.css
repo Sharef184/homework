@@ -2,21 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+/* base styles */
 body {
-  color: rgb(var(--foreground-rgb));
-  padding: 1rem;
+  background-color:#f7f7f7;  
+  @apply 
+  text-gray-500;
+}
+h1, h2 {
+  @apply font-bold text-primary text-lg;
+}
+main {
+  @apply max-w-5xl my-6 mx-auto px-8;
+}
+main > h2 {
+  @apply mb-4 pb-2 text-base ;
+}
+p > a {
+  @apply text-primary underline;
+}
+
+/* nav styles */
+nav {
+    @apply 
+    py-3 px-12
+    bg-white
+    border-b-4 border-gray-200;
+  }
+
+/* button styles */
+button {
+  @apply 
+    px-3 py-2 
+    rounded-sm 
+    flex justify-between items-center gap-2
+    text-sm;
+}
+.btn-primary {
+  @apply bg-white;
+}
+.button-icon {
+    color: #10514a;
+}
+
+/* card styles */
+.card {
+  @apply 
+    bg-white 
+    shadow-sm 
+    rounded-md 
+    py-3 px-4 my-4 
+    relative 
+    overflow-hidden;
+}
+.card h3 {
+  @apply 
+    font-bold text-gray-700 text-sm 
+    mb-0;
 }
